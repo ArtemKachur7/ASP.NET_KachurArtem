@@ -1,3 +1,0 @@
-﻿<Project>
-  <Import Project="..\buildMultiTargeting\Asp_net_Lab_1.props" />
-</Project>

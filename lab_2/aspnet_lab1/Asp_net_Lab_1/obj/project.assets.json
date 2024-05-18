@@ -7734,11 +7734,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "G:\\asp.net_KachurA\\ASP.NET_KachurArtem\\lab1\\aspnet_pra\\Asp_net_Lab_1\\Asp_net_Lab_1.csproj",
+      "projectUniqueName": "C:\\Users\\User\\Desktop\\ASP.NET_KachurArtem\\lab_2\\aspnet_lab1\\Asp_net_Lab_1\\Asp_net_Lab_1.csproj",
       "projectName": "Asp_net_Lab_1",
-      "projectPath": "G:\\asp.net_KachurA\\ASP.NET_KachurArtem\\lab1\\aspnet_pra\\Asp_net_Lab_1\\Asp_net_Lab_1.csproj",
+      "projectPath": "C:\\Users\\User\\Desktop\\ASP.NET_KachurArtem\\lab_2\\aspnet_lab1\\Asp_net_Lab_1\\Asp_net_Lab_1.csproj",
       "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-      "outputPath": "G:\\asp.net_KachurA\\ASP.NET_KachurArtem\\lab1\\aspnet_pra\\Asp_net_Lab_1\\obj\\",
+      "outputPath": "C:\\Users\\User\\Desktop\\ASP.NET_KachurArtem\\lab_2\\aspnet_lab1\\Asp_net_Lab_1\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",

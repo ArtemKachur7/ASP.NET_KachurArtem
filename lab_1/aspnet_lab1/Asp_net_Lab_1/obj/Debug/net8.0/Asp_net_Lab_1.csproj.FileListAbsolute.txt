@@ -228,3 +228,15 @@ G:\asp.net_KachurA\lab1\aspnet_pra\Asp_net_Lab_1\obj\Debug\net8.0\refint\Asp_net
 G:\asp.net_KachurA\lab1\aspnet_pra\Asp_net_Lab_1\obj\Debug\net8.0\Asp_net_Lab_1.pdb
 G:\asp.net_KachurA\lab1\aspnet_pra\Asp_net_Lab_1\obj\Debug\net8.0\Asp_net_Lab_1.genruntimeconfig.cache
 G:\asp.net_KachurA\lab1\aspnet_pra\Asp_net_Lab_1\obj\Debug\net8.0\ref\Asp_net_Lab_1.dll
+C:\Users\User\Desktop\ASP.NET_KachurArtem\lab_1\aspnet_lab1\Asp_net_Lab_1\obj\Debug\net8.0\Asp_net_Lab_1.csproj.AssemblyReference.cache
+C:\Users\User\Desktop\ASP.NET_KachurArtem\lab_1\aspnet_lab1\Asp_net_Lab_1\obj\Debug\net8.0\Asp_net_Lab_1.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\User\Desktop\ASP.NET_KachurArtem\lab_1\aspnet_lab1\Asp_net_Lab_1\obj\Debug\net8.0\Asp_net_Lab_1.AssemblyInfoInputs.cache
+C:\Users\User\Desktop\ASP.NET_KachurArtem\lab_1\aspnet_lab1\Asp_net_Lab_1\obj\Debug\net8.0\Asp_net_Lab_1.AssemblyInfo.cs
+C:\Users\User\Desktop\ASP.NET_KachurArtem\lab_1\aspnet_lab1\Asp_net_Lab_1\obj\Debug\net8.0\Asp_net_Lab_1.csproj.CoreCompileInputs.cache
+C:\Users\User\Desktop\ASP.NET_KachurArtem\lab_1\aspnet_lab1\Asp_net_Lab_1\obj\Debug\net8.0\Asp_net_Lab_1.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\User\Desktop\ASP.NET_KachurArtem\lab_1\aspnet_lab1\Asp_net_Lab_1\obj\Debug\net8.0\Asp_net_Lab_1.RazorAssemblyInfo.cache
+C:\Users\User\Desktop\ASP.NET_KachurArtem\lab_1\aspnet_lab1\Asp_net_Lab_1\obj\Debug\net8.0\Asp_net_Lab_1.RazorAssemblyInfo.cs
+C:\Users\User\Desktop\ASP.NET_KachurArtem\lab_1\aspnet_lab1\Asp_net_Lab_1\obj\Debug\net8.0\Asp_net_Lab_1.sourcelink.json
+C:\Users\User\Desktop\ASP.NET_KachurArtem\lab_1\aspnet_lab1\Asp_net_Lab_1\obj\Debug\net8.0\Asp_net_Lab_1.dll
+C:\Users\User\Desktop\ASP.NET_KachurArtem\lab_1\aspnet_lab1\Asp_net_Lab_1\obj\Debug\net8.0\refint\Asp_net_Lab_1.dll
+C:\Users\User\Desktop\ASP.NET_KachurArtem\lab_1\aspnet_lab1\Asp_net_Lab_1\obj\Debug\net8.0\Asp_net_Lab_1.pdb

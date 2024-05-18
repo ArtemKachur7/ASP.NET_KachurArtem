@@ -1,0 +1,36 @@
+﻿@model IEnumerable<Asp_net_Lab_1.Models.User>
+
+<h2>Користувачі</h2>
+
+<p>
+    <a asp-action="CreateUser">Створити нового користувача</a>
+</p>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Повне ім'я</th>
+            <th>Email</th>
+            <th>Номер телефону</th>
+            <th>Адреса</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var user in Model)
+        {
+            <tr>
+                <td>@user.Id</td>
+                <td>@user.FullName</td>
+                <td>@user.Email</td>
+                <td>@user.PhoneNumber</td>
+                <td>@user.Address</td>
+                <td>
+                    <a asp-action="EditUser" asp-route-id="@user.Id">Редагувати</a> |
+                    <a asp-action="DeleteUser" asp-route-id="@user.Id">Видалити</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

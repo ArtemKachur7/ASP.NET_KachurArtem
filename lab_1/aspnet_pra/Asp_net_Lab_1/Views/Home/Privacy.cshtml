@@ -1,0 +1,37 @@
+﻿@model IEnumerable<Asp_net_Lab_1.Models.Product>
+@using Asp_net_Lab_1.Resources
+@using Microsoft.Extensions.Localization
+@inject IStringLocalizer<Texts> Localizer
+
+<h2>@Localizer["Автомобілі"]</h2>
+
+<p>
+    <a asp-action="CreateProd">@Localizer["Додати новий автомобіль"]</a>
+</p>
+
+<table class="table"> 
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>@Localizer["Назва"]</th>
+            <th>@Localizer["Опис"]</th>
+            <th>@Localizer["Ціна"]</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var product in Model)
+        {
+            <tr>
+                <td>@product.Id</td>
+                <td>@product.Name</td>
+                <td>@product.Description</td>
+                <td>@product.Price</td>
+                <td>
+                    <a asp-action="EditProd" asp-route-id="@product.Id">@Localizer["Редагувати"]</a> |
+                    <a asp-action="DeleteProd" asp-route-id="@product.Id">@Localizer["Видалити"]</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

@@ -20,7 +20,7 @@ namespace Asp_net_Lab_1.Controllers
         public IActionResult Index()
         {
             var users = DataEmulator.Users;
-            ViewBag.Користувачі = _localizer["Автомобільні салони"].Value;
+            ViewBag.Користувачі = _localizer["Користувачі"].Value;
             return View(users);
         }
 
@@ -51,7 +51,7 @@ namespace Asp_net_Lab_1.Controllers
             {
                 return NotFound();
             }
-            return View("EditCarSalon", user);
+            return View("EditUser", user);
         }
 
         [HttpPost]
@@ -88,7 +88,7 @@ namespace Asp_net_Lab_1.Controllers
             return View(user);
         }
 
-        [HttpPost, ActionName("DeleteCarSalon")]
+        [HttpPost, ActionName("DeleteUser")]
         [ValidateAntiForgeryToken]
         public IActionResult DeleteConfirmed(int id)
         {
@@ -176,7 +176,7 @@ namespace Asp_net_Lab_1.Controllers
             return View(product);
         }
 
-        [HttpPost, ActionName("DeleteCar")]
+        [HttpPost, ActionName("DeleteProd")]
         [ValidateAntiForgeryToken]
         public IActionResult DeleteConfirmed_Prod(int id)
         {

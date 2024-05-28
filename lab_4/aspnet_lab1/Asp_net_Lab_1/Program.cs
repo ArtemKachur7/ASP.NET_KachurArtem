@@ -1,84 +1,72 @@
-using Microsoft.Extensions.Configuration;
-using Microsoft.EntityFrameworkCore;
-using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+using System.Collections.Generic;
 using System.Globalization;
-using System.Reflection;
 using Asp_net_Lab_1.Models;
-using Asp_net_Lab_1.Registration;
 using Asp_net_Lab_1.Resources;
 using Microsoft.AspNetCore.Builder;
-using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Localization;
 using Microsoft.AspNetCore.Localization.Routing;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Options;
-using System.Collections.Generic;
+using Auth0.AspNetCore.Authentication;
 
-internal class Program
+var builder = WebApplication.CreateBuilder(args);
+
+builder.Services
+    .AddControllersWithViews()
+    .AddDataAnnotationsLocalization();
+builder.Services.AddLocalization(/*options => options.ResourcesPath = "Resources"*/);
+builder.Services.Configure<RequestLocalizationOptions>(options =>
 {
-    public static void Main(string[] args)
+    List<CultureInfo> supportedCultures = new List<CultureInfo>()
     {
-        var builder = WebApplication.CreateBuilder(args);
+        new CultureInfo("en-us"),
+        new CultureInfo("uk-ua")
+    };
+    options.DefaultRequestCulture = new RequestCulture("en-us");
+    options.SupportedCultures = supportedCultures;
+    options.SupportedUICultures = supportedCultures;
 
-        var configuration = builder.Configuration;
-        var connectionString = configuration.GetConnectionString("DefaultConnection");
+    var requestProvider = new RouteDataRequestCultureProvider();
+    options.RequestCultureProviders.Insert(0, requestProvider);
+});
 
-        builder.Services.AddDbContext<ApplicationDbContext>(options =>
-            options.UseSqlServer(connectionString));
+// Добавляем аутентификацию Auth0
+builder.Services.AddAuth0WebAppAuthentication(options =>
+{
+    options.Domain = builder.Configuration["Auth0:Domain"];
+    options.ClientId = builder.Configuration["Auth0:ClientId"];
+    options.ClientSecret = builder.Configuration["Auth0:ClientSecret"];
+});
 
-        builder.Services
-            .AddControllersWithViews()
-            .AddDataAnnotationsLocalization();
+var app = builder.Build();
 
-        builder.Services.AddLocalization();
-
-        ConfigureServices(builder.Services);
-
-        builder.Services.Configure<RequestLocalizationOptions>(options =>
-        {
-            List<CultureInfo> supportedCultures = new List<CultureInfo>()
-            {
-                new CultureInfo("en-us"),
-                new CultureInfo("uk-ua")
-            };
-            options.DefaultRequestCulture = new RequestCulture("en-us");
-            options.SupportedCultures = supportedCultures;
-            options.SupportedUICultures = supportedCultures;
-
-            var requestProvider = new RouteDataRequestCultureProvider();
-            options.RequestCultureProviders.Insert(0, requestProvider);
-        });
-
-        var app = builder.Build();
-
-        if (!app.Environment.IsDevelopment())
-        {
-            app.UseExceptionHandler("/Home/Error");
-            app.UseHsts();
-        }
-
-        app.UseHttpsRedirection();
-        app.UseStaticFiles();
-
-        app.UseRouting();
-
-        app.UseRequestLocalization(app.Services.GetRequiredService<IOptions<RequestLocalizationOptions>>().Value);
-
-        app.UseAuthorization();
-
-        app.MapControllerRoute(
-            name: "default",
-            pattern: "{culture=en-US}/{controller=Home}/{action=Index}/{id?}");
-
-        app.Run();
-    }
-
-    public static void ConfigureServices(IServiceCollection services)
-    {
-        services.AddIdentity<ApplicationUser, IdentityRole>()
-            .AddEntityFrameworkStores<ApplicationDbContext>()
-            .AddDefaultTokenProviders();
-    }
+// Configure the HTTP request pipeline.
+if (!app.Environment.IsDevelopment())
+{
+    app.UseExceptionHandler("/Home/Error");
+    // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
+    app.UseHsts();
 }
 
+app.UseHttpsRedirection();
+app.UseStaticFiles();
+
+app.UseRouting();
+
+app.UseRequestLocalization(app.Services.GetService<IOptions<RequestLocalizationOptions>>().Value);
+
+// Добавляем аутентификацию и авторизацию в конвейер обработки запросов
+app.UseAuthentication();
+app.UseAuthorization();
+
+app.MapControllerRoute(
+    name: "default",
+    pattern: "{culture=en-US}/{controller=Home}/{action=Index}/{id?}");
+
+app.MapControllerRoute(
+    name: "account",
+    pattern: "Account/{action=Login}/{id?}",
+    defaults: new { controller = "Account" });
+
+app.Run();

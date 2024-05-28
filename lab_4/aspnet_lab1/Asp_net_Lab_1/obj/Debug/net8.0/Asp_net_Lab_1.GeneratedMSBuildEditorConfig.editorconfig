@@ -18,10 +18,6 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = C:\Users\User\Desktop\ASP.NET_KachurArtem\lab_4\aspnet_lab1\Asp_net_Lab_1
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/User/Desktop/ASP.NET_KachurArtem/lab_4/aspnet_lab1/Asp_net_Lab_1/Registration/Register.cshtml]
-build_metadata.AdditionalFiles.TargetPath = UmVnaXN0cmF0aW9uXFJlZ2lzdGVyLmNzaHRtbA==
-build_metadata.AdditionalFiles.CssScope = 
-
 [C:/Users/User/Desktop/ASP.NET_KachurArtem/lab_4/aspnet_lab1/Asp_net_Lab_1/Views/Home/CreateOrder.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxDcmVhdGVPcmRlci5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 

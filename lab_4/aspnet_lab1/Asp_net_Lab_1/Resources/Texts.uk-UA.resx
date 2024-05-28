@@ -237,4 +237,40 @@
   <data name="Ціна" xml:space="preserve">
     <value>Ціна</value>
   </data>
+  <data name="Автомобілі" xml:space="preserve">
+    <value>Автомобілі</value>
+  </data>
+  <data name="Автомобільні салони" xml:space="preserve">
+    <value>Автомобільні салони</value>
+  </data>
+  <data name="Авторизація/Реєстрація" xml:space="preserve">
+    <value>Авторизація/Реєстрація</value>
+  </data>
+  <data name="Вихід" xml:space="preserve">
+    <value>Вихід</value>
+  </data>
+  <data name="Додати" xml:space="preserve">
+    <value>Додати</value>
+  </data>
+  <data name="Додати новий автомобіль" xml:space="preserve">
+    <value>Додати новий автомобіль</value>
+  </data>
+  <data name="Додати новий салон" xml:space="preserve">
+    <value>Додати новий салон</value>
+  </data>
+  <data name="Електро, повний привід" xml:space="preserve">
+    <value>Електро, повний привід</value>
+  </data>
+  <data name="Каталог автомобілів" xml:space="preserve">
+    <value>Каталог автомобілів</value>
+  </data>
+  <data name="Назва салону" xml:space="preserve">
+    <value>Назва салону</value>
+  </data>
+  <data name="Новий спорт режим 820к.с, 2.5 до 100км/год" xml:space="preserve">
+    <value>Новий спорт режим 820к.с, 2.5 до 100км/год</value>
+  </data>
+  <data name="Турбодизель 4.2с до 100км/год" xml:space="preserve">
+    <value>Турбодизель 4.2с до 100км/год</value>
+  </data>
 </root>
